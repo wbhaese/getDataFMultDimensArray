@@ -1,4 +1,4 @@
-public function reportToTxtECsv($base, $data)
+public function reportToTxtOrCsv($base, $data)
     {
         
         $filename = $base . 'my-file' . date('d-m-Y-H-i-s') . '.txt';//CSV has same structure
@@ -13,6 +13,8 @@ public function reportToTxtECsv($base, $data)
             $l .= $model;
             $l .= '
 ';
+            //this string above is the break line, don't change it :-)
+
             fwrite($fp, $l);
       }
        
